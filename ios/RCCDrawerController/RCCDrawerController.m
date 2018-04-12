@@ -50,7 +50,6 @@ UIViewController *rightViewController = nil;
     // default is all MMOpenDrawerGestureModeAll and MMCloseDrawerGestureModeAll
     self.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
-    self.centerHiddenInteractionMode = MMDrawerOpenCenterInteractionModeFull;
     
     NSNumber *disableOpenGesture = props[@"disableOpenGesture"];
     if ([disableOpenGesture boolValue]) {
