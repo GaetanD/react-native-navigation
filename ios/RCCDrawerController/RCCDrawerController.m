@@ -50,6 +50,7 @@ UIViewController *rightViewController = nil;
     // default is all MMOpenDrawerGestureModeAll and MMCloseDrawerGestureModeAll
     self.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
+    self.centerHiddenInteractionMode = MMDrawerOpenCenterInteractionModeFull;
     
     NSNumber *disableOpenGesture = props[@"disableOpenGesture"];
     if ([disableOpenGesture boolValue]) {
@@ -84,6 +85,8 @@ UIViewController *rightViewController = nil;
     
     if (self.drawerStyle[@"drawerShadow"]) {
         self.showsShadow = ([self.drawerStyle[@"drawerShadow"] boolValue]) ? YES : NO;
+        self.shadowRadius = 10.0f;
+        self.shadowOpacity = 0.4f;
     }
     
     NSNumber *leftDrawerWidth = self.drawerStyle[@"leftDrawerWidth"];
